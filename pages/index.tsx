@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import type {NextPage} from "next";
+import Calculator from "@/components/Calculator";
 
 const Home: NextPage = () => {
   return (
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
                   understand your own cycle.
                 </p>
               </div>
+              <Calculator />
               <div className="mt-20 py-4 text-center">
                 <p className="text-gray-400">Powered by</p>
                 <a href="https://github.com/serhiyhvala" className='text-indigo-500 font-medium' target='_blank'
