@@ -17,6 +17,11 @@ export interface ButtonProps {
   onClick: () => void;
 }
 
+export interface CalendarProps {
+  selected: string
+  onChange: (data: number | Date) => void
+}
+
 export interface CycleLengthProps {
   onQuickSelection: (value: number) => void;
 }
