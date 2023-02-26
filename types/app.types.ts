@@ -1,4 +1,4 @@
-import {ChangeEvent} from "react";
+import {ChangeEvent, ReactNode} from "react";
 
 export interface HeadlineProps {
   primary: string,
@@ -9,6 +9,12 @@ export interface InputProps {
   value?: string
   name: string;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+}
+
+export interface ButtonProps {
+  children: ReactNode;
+  disabled?: boolean;
+  onClick: () => void;
 }
 
 export interface CycleLengthProps {
