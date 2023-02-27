@@ -33,7 +33,16 @@ function formReducer(state: FormState, action: Action) {
 }
 
 function outcomesReducer(state: OutcomesState, action: Action) {
-  // TODO: outcomesReducer Logic
+  switch (action.type){
+    case 'SET_OUTCOMES':
+      return {
+        ...state,
+        ...action.payload
+      }
+    case 'RESET':
+      return initialOutcomesState
+    default: return state
+  }
 }
 
 export { initialFormState, initialOutcomesState, formReducer, outcomesReducer };
