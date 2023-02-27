@@ -29,7 +29,7 @@ const Calendar = ({selected, onChange}:CalendarProps) => {
     return classes.filter(Boolean).join(' ');
   }
   const today = startOfToday()
-  const [selectedDay, setSelectedDay] = useState<number | Date>(new Date().getDay())
+  const [selectedDay, setSelectedDay] = useState< number | Date>(new Date().getDay())
   const [currentMonth, setCurrentMonth] = useState(format(today, CALENDAR_FORMAT))
   const firstDayCurrentMonth = parse(currentMonth, CALENDAR_FORMAT, new Date())
   const days = eachDayOfInterval({
@@ -45,7 +45,7 @@ const Calendar = ({selected, onChange}:CalendarProps) => {
     setCurrentMonth(format(firstDayNextMonth, CALENDAR_FORMAT))
   }, [firstDayCurrentMonth])
   const handleChange = useCallback(
-      (day: number | Date) => () => {
+      (day:  number | Date) => () => {
         setSelectedDay(day);
         onChange(day);
       },
