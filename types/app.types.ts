@@ -17,6 +17,14 @@ export interface ButtonProps {
   onClick: () => void;
 }
 
+export interface OutcomesState {
+  fertileWindow: Date[];
+  ovulationDate: Date | null;
+  nextPeriod: Date | null;
+  pregnancyTestDay: Date | null;
+  expectedDueDate: Date | null;
+}
+
 export interface CalendarProps {
   selected: string
   onChange: (data: number | Date) => void
@@ -28,6 +36,12 @@ export interface CycleLengthProps {
 
 export interface TagProps extends CycleLengthProps {
   value: number;
+}
+
+export interface CardProps {
+  date: any;
+  title: string;
+  description: string;
 }
 
 export interface FormState {
