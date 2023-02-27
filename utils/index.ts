@@ -30,10 +30,11 @@ function isNotEmpty(value: string) {
 	return value !== undefined && value !== null && value !== '';
 }
 
-function toFormatted(date: Date | number, formatString = DATE_FORMAT) {
+function toFormatted(date: Date | null, formatString = DATE_FORMAT) {
 	if (!isValid(date)) {
 		return null;
 	}
+	// @ts-ignore
 	return format(date, formatString);
 }
 
